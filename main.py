@@ -20,7 +20,7 @@ for urls in video_ids[:20]:
             pass
         
         
-sorted_views = sorted(list(islice(top_results.values(), 3)), reverse=True)      
+sorted_views = islice(sorted(list(top_results.values()), reverse=True), 3)      
         
 for key, value in top_results.items():
     if value in sorted_views:

@@ -26,4 +26,3 @@ for key, value in top_results.items():
     if value in sorted_views:
         print(key)
                
-#u

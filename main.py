@@ -2,6 +2,7 @@ import urllib.request
 import re
 import yt_dlp
 from itertools import islice
+import view
 
 usr = str(input("Your input goes here: "))
 html = urllib.request.urlopen("https://www.youtube.com/results?search_query="+usr)
@@ -20,9 +21,14 @@ for urls in video_ids[:20]:
             pass
         
         
-sorted_views = islice(sorted(list(top_results.values()), reverse=True), 3)      
+by_view = view.views(top_results)
+
+for v in by_view:
+    print("https://www.youtube.com/watch/?v="+v)
+
+# sorted_views = islice(sorted(list(top_results.values()), reverse=True), 3)      
         
-for key, value in top_results.items():
-    if value in sorted_views:
-        print(key)
+# for key, value in top_results.items():
+#     if value in sorted_views:
+#         print(key)
                

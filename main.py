@@ -28,10 +28,4 @@ if __name__ == '__main__':
             
             
     by_view = view.views(top_results)
-
-    for v in by_view:
-        print("https://www.youtube.com/watch/?v="+v)
-
-    youtubedata = youtubedataapiv3.like_count(video_ids)
-    print(video_ids[0])
-    print(youtubedata)
+    youtubedata = youtubedataapiv3.like_count(by_view)

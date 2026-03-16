@@ -27,5 +27,5 @@ if __name__ == '__main__':
                 pass
             
             
-    by_view = view.views(top_results)
+    by_view = view.views(top_results) #stores the top 10 video urls(11 letter part) which has been sorted by views
     youtubedata = youtubedataapiv3.like_count(by_view)

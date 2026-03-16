@@ -29,3 +29,14 @@ if __name__ == '__main__':
             
     by_view = view.views(top_results) #stores the top 10 video urls(11 letter part) which has been sorted by views
     youtubedata = youtubedataapiv3.like_count(by_view)
+    video = []
+
+    keys = list(by_view.keys())
+    views = list(by_view.values())
+    likes = list(youtubedata.values())
+
+    for i in range(10):
+        percentage = int((likes[i] / views[i]) * 100)
+        video.append({keys[i]: percentage})
+        
+    print(video)

@@ -4,7 +4,7 @@ import re
 import yt_dlp
 from itertools import islice
 
-API_KEY = "AIzaSyAFdR_ceBa1gtOL5Pf7OT03Ic_LgHkjpPg"
+API_KEY = "API_KEY"
 
 def views(top_results):
     by_view = {}

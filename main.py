@@ -9,6 +9,17 @@ import youtubedataapiv3
 
 if __name__ == '__main__':
     
+    print("-----------Welcome to Yinder ^^----------")
+    print("-----------------------------------------")
+    print("Choose options:")
+    target = int(input("1 - search normal stuffs \n2 - looking for something to learn"))
+    if target == 1:
+        duration = int(input("Minimum Duration?: "))
+        #still haven't decide what to do next:(
+
+
+    
+
     usr = str(input("Your input goes here: "))
     html = urllib.request.urlopen("https://www.youtube.com/results?search_query="+usr)
 
@@ -31,12 +42,16 @@ if __name__ == '__main__':
     youtubedata = youtubedataapiv3.like_count(by_view)
     video = []
 
-    keys = list(by_view.keys())
-    views = list(by_view.values())
-    likes = list(youtubedata.values())
+    # keys = list(by_view.keys())
+    # views = list(by_view.values())
+    # likes = list(youtubedata.values())
 
-    for i in range(10):
-        percentage = int((likes[i] / views[i]) * 100)
-        video.append({keys[i]: percentage})
+    for urls in by_view:
+        print("https://www.youtube.com/watch?v="+urls)
+        
+    
+
+
+    
         
     print(video)
